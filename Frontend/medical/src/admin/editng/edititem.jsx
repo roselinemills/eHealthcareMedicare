@@ -1,11 +1,14 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import productLink from "../../services/productLink";
+import { useLocation } from "react-router-dom";
 
 
-function EditInput({product}) {
-console.log(product)
+
+function EditInput({products}) {
+const info =useLocation()
+const product =info.state.product
   const [inputs, setInput] = useState({
     product_name: product?.product_name,
     description: product?.description,
@@ -15,6 +18,7 @@ console.log(product)
     manufacturer: product?.manufacturer,
     image: product?.image, // For file input, initialize to null
   });
+  // console.log(inputs,product?.product_name)
   return (
     <div>
       <div>
@@ -27,7 +31,7 @@ console.log(product)
             <Form.Control
               type="text"
               style={{ height: "60px" }}
-              value={inputs.product_name}
+              value={inputs?.product_name}
               required
               onChange={(e) => {
                 setInput({ ...inputs, product_name: e.target.value });

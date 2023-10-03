@@ -17,7 +17,7 @@ function ShowData({addToCart,info,text,selectedCategory}) {
     return ( <div className="row">
          {display?.map((e,id)=>(
 
-            <div key={id} className="col-md-3  mb-5 ">
+            <div key={id} className="col-md-3  border mb-5 ">
                 <div onClick={()=>{navigate('/eachitem',{state:{e}})}} ><ProductCard product={e}/></div>
                 <div><button className="px-2" onClick={()=>{addToCart(e)}}>Add to cart</button></div>
             </div>

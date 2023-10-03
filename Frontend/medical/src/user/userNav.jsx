@@ -12,7 +12,7 @@ const navigate= useNavigate()
 
 <div className="bg-body-dark">
         <div className="d-flex justify-content-around ">
-          <div href="#home" className="fs-3 fw-bold">Brand link</div>
+          <div href="#home" className="fs-3 fw-bold">eHealth</div>
           <div className="fs-5 "><Link to='/'>Home</Link> </div>
           <div className="fs-5 ">
             {/* <div>Login</div> */}

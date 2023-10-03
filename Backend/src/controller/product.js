@@ -52,7 +52,8 @@ console.log(error)
     },
     async getUpdate(req,res){
         try {
-            await Product.Update(req.body,{where:{id:req.params.id}})
+            console.log(req.params)
+            await Product.update(req.body,{where:{id:req.params.id}})
             res.send("Update was Successful")
         } catch (error) {
 res.send("Update was Unsucessful")

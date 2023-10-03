@@ -68,7 +68,7 @@ function UserLanding() {
 
 const navigate =useNavigate()
 
-    return ( <div className=" d-flex justify-content-around" >
+    return ( <div className=" " >
       <div>
         <div><button onClick={()=>navigate('cart',{state:{cartItems}})}>carts</button>
         <div>
@@ -84,7 +84,7 @@ const navigate =useNavigate()
         ))}
             </div>
             </div>
-        <div className=" d-flex justify-content-center   " >
+        <div className=" " >
           <div>
           <ShowData  info={info} addToCart={addToCart} selectedCategory={change} text={searchTerm}/>
           </div>
